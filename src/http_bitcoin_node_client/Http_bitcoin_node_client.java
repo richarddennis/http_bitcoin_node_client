@@ -21,6 +21,7 @@ import java.util.logging.Logger;
  */
 public class Http_bitcoin_node_client {
     
+    //TODO - read in the list of IP addresses from the crawler
     private final static String ip_Array = "http://94.242.209.229/";
     
 //    private final static String ip_address = ip_Array;
@@ -58,6 +59,9 @@ public class Http_bitcoin_node_client {
             while ((next_record = reader.readLine()) != null) {
                 System.out.println(next_record);
             }
+            
+            
+//            TODO - Save all http requests that contain data to a text file or something
             socket.close();
         } catch (MalformedURLException ex) {
             Logger.getLogger(Http_bitcoin_node_client.class.getName()).log(Level.SEVERE, null, ex);
